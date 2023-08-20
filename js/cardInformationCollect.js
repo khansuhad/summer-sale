@@ -59,6 +59,9 @@ const card3 = getCard("card3", "card-money3","card-name3");
 const card4 = getCard("card4", "card-money4","card-name4");
 const card5 = getCard("card5", "card-money5","card-name5");
 const card6 = getCard("card6", "card-money6","card-name6");
+const card7 = getCard("card7", "card-money7","card-name7");
+const card8 = getCard("card8", "card-money8","card-name8");
+const card9 = getCard("card9", "card-money9","card-name9");
 
 
 
