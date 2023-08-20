@@ -4,23 +4,30 @@ function collectMoney(cardMoney) {
 
   return MoneyFloat;
 }
-
-function getCard(cardName, cardMoney) {
-  document.getElementById(cardName).addEventListener("click", function () {
+let i = 0 ;
+function getCard(card, cardMoney,cardName) {
+  document.getElementById(card).addEventListener("click", function () {
+    
+    const applyButton = document.getElementById("apply-button");
+    const addName = document.getElementById("add-name");
+    const makePurchase = document.getElementById("make-purchase");
+    const cName = document.getElementById(cardName).innerText;
     const cMoney = collectMoney(cardMoney);
     const totalPrice = collectMoney("total-price");
     const mainTotalPrice = cMoney + totalPrice;
     document.getElementById("total-price").innerText =
       mainTotalPrice.toFixed(2);
-    const mainPrice = document.getElementById("total-price").innerText;
-    const applyButton = document.getElementById("apply-button");
-    const makePurchase = document.getElementById("make-purchase");
 
+      i++ ;
+      const p = document.createElement('p');
+      p.innerText = `${i} .  ${cName}`
+      addName.appendChild(p);
+      const mainPrice = document.getElementById("total-price").innerText;
     if (mainPrice > 0) {
       makePurchase.removeAttribute("disabled");
     }
 
-    if (mainPrice > 200) {
+    if (mainPrice >= 200) {
       applyButton.removeAttribute("disabled");
 
       applyButton.addEventListener("click", function () {
@@ -42,15 +49,18 @@ function getCard(cardName, cardMoney) {
           coupon.value = "";
         }
       });
-    }
+    };
+
   });
 }
-const card1 = getCard("card1", "card-money1");
-const card2 = getCard("card2", "card-money2");
-const card3 = getCard("card3", "card-money3");
-const card4 = getCard("card4", "card-money4");
-const card5 = getCard("card5", "card-money5");
-const card6 = getCard("card6", "card-money6");
+const card1 = getCard("card1", "card-money1","card-name1");
+const card2 = getCard("card2", "card-money2","card-name2");
+const card3 = getCard("card3", "card-money3","card-name3");
+const card4 = getCard("card4", "card-money4","card-name4");
+const card5 = getCard("card5", "card-money5","card-name5");
+const card6 = getCard("card6", "card-money6","card-name6");
+
+
 
 document.getElementById("go-home").addEventListener("click", function () {
   const discountPrice = document.getElementById("discount-price");
@@ -58,10 +68,13 @@ document.getElementById("go-home").addEventListener("click", function () {
   const mainPrice = document.getElementById("total-price");
   const makePurchase = document.getElementById("make-purchase");
   const applyButton = document.getElementById("apply-button");
+  const addName = document.getElementById("add-name");
 
   discountPrice.innerText = "00.00";
   inTotalPrice.innerText = "00.00";
   mainPrice.innerText = "00.00";
+  addName.innerText = "";
+  i = 0;
 
   makePurchase.setAttribute("disabled", "true");
   applyButton.setAttribute("disabled", "true");
