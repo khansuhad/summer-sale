@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- daisyui and tailwind css  link-->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="images/Summer 1.png" type="image/x-icon">
 <script src="https://cdn.tailwindcss.com"></script>
     <title>85-summer-sale</title>
 </head>
@@ -148,7 +149,7 @@
                           <span class="label-text text-2xl font-semibold">Have coupon?</span>
                         </label>
                         <label class="input-group">
-                          <input type="text" id="coupon-code" placeholder="Coupon code" class="input input-bordered" />
+                          <input type="text" id="coupon-code" placeholder="Coupon code" class="input input-bordered w-[90%]" />
                           <button class="btn btn-secondary relative bottom-5 text-white rounded mt-5" disabled id="apply-button" >Apply</button>
                         </label>
                       </div>
@@ -159,7 +160,9 @@
                     <p class="text-xl"><span class="font-bold">Total price:</span > <span id="total-price">00.00</span>  TK </p>
                       <p class="text-xl" ><span class="font-bold">Discount :</span> <span id="discount-price">00.00</span> TK</p>
                       <p class="text-xl"><span class="font-bold ">Total:</span> <span id="intotal-price">00.00</span> TK</p>
+                      <hr class="mt-5">
                 </div>
+                
                 <div class="flex items-center justify-center ">
                
 <button class="btn btn-secondary relative bottom-5 text-white" onclick="my_modal_5.showModal()" disabled id="make-purchase">Make Purchase</button>
