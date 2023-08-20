@@ -148,8 +148,8 @@
                           <span class="label-text text-2xl font-semibold">Have coupon?</span>
                         </label>
                         <label class="input-group">
-                          <input type="text" placeholder="Coupon code" class="input input-bordered" />
-                          <span class="bg-[#E527B2] font-semibold text-white">Apply</span>
+                          <input type="text" id="coupon-code" placeholder="Coupon code" class="input input-bordered" />
+                          <button class="btn btn-secondary relative bottom-5 text-white rounded mt-5" disabled id="apply-button" >Apply</button>
                         </label>
                       </div>
                 </div>
@@ -172,7 +172,7 @@
     <p class="py-2">Your Purchase the product</p>
     <div class="modal-action flex justify-center mt-0">
  
-      <button class="btn btn-secondary text-white ">Go Home</button>
+      <button class="btn btn-secondary text-white " id="go-home">Go Home</button>
     </div>
   </form>
 </dialog>
